@@ -99,3 +99,22 @@ body {
     
    
 }
+.location {
+    display: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #cbc8d4;
+    color: #62357b;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #5b2d93; /* Darker blue on hover */
+}
