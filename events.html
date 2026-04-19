@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall Events & Lifestyle</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --primary: #2b1b4a;
+            --accent: #131010;
+            --light: #694d82;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--light);
+            color: var(--primary);
+        }
+
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+        }
+
+        /* Responsive Grid System */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-container {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* The "Secondary" image starts invisible */
+        .img-secondary {
+            opacity: 0;
+        }
+
+        /* Hover Effect: Swap Images */
+        .section-card:hover .img-primary {
+            opacity: 0;
+        }
+        .section-card:hover .img-secondary {
+            opacity: 1;
+        }
+
+        .content {
+            padding: 1.5rem;
+        }
+
+        .content h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        /* Upcoming Events List Style */
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .event-list li span {
+            font-weight: bold;
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    
+   
+
+    <div class = "logo">brandlyy</div>
+                <br>
+                    
+                
+            <nav>
+                <ul>
+                    <li><a href = "home.html" class = "nav-links">Home</a></li>
+                    <li><a href = "events.html" class = "nav-links">Events</a></li>
+                    <li><a href = "shop.html" class = "nav-links">Shop</a></li>
+                    
+                </ul>
+            
+            </nav>
+            <br>
+            </div>
+</header>
+
+<main class="container">
+    
+    <section class="section-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500" class="img-primary" alt="People laughing">
+            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=500" class="img-secondary" alt="Party streamers">
+        </div>
+        <div class="content">
+            <h3>Fun Times</h3>
+            <p>Everyday moments and community gatherings at our main atrium.</p>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=500" class="img-primary" alt="Artist on stage">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=500" class="img-secondary" alt="Crowd cheering">
+        </div>
+        <div class="content">
+            <h3>Live Concerts</h3>
+            <p>Flashbacks to the incredible artists who rocked our stage.</p>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="content">
+            <h3>Upcoming Events</h3>
+            <ul class="event-list">
+                <li><span>May 15:</span> Summer Fashion Show</li>
+                <li><span>June 02:</span> Tech Expo 2026</li>
+                <li><span>June 20:</span> Midnight Sale Extravaganza</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500" class="img-primary" alt="Cinema screen">
+            <img src="https://images.unsplash.com/photo-1517604401157-538a9663ecf3?auto=format&fit=crop&w=500" class="img-secondary" alt="Cinema seats">
+        </div>
+        <div class="content">
+            <h3>The Cinema</h3>
+            <p>Premium 4K laser projection and reclining comfort.</p>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1547153760-18fc86324498?auto=format&fit=crop&w=500" class="img-primary" alt="Skateboarder">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=500" class="img-secondary" alt="Basketball game">
+        </div>
+        <div class="content">
+            <h3>Sports & Action</h3>
+            <p>From skate competitions to high-stakes basketball games.</p>
+        </div>
+    </section>
+
+    <section class="section-card">
+        <div class="image-container">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=500" class="img-primary" alt="Gym weights">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=500" class="img-secondary" alt="Yoga class">
+        </div>
+        <div class="content">
+            <h3>Fitness Center</h3>
+            <p>State-of-the-art equipment to keep you moving.</p>
+        </div>
+    </section>
+
+</main>
+<footer>
+    Brand names and logos are the property of their respective owners. All rights reserved. This website is for informational purposes only and does not endorse or promote any specific brands or products.
+</footer>
+
+</body>
+</html>

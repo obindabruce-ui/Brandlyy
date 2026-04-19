@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandlyyy home | Shops & Wellness</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --gold: #e9e6e0;
+            --dark: #dbcece;
+            --glass: rgba(210, 202, 215, 0.9);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            background-color: #ba90d3;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            margin-bottom: 2rem;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+
+        /* Wellness Grid */
+        .wellness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .price-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+        }
+
+        /* Booking Form */
+        .booking-section {
+            background: #f4f1ea;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b38f48;
+        }
+
+        /* Gallery Sections */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Brand Links */
+        .brand-links {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+            border-radius: 10px;
+        }
+
+        .brand-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid var(--gold);
+            padding: 10px 20px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .brand-links a:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    
+    
+
+
+    <div class = "logo">brandlyy</div>
+                <br>
+                    
+                
+            <nav>
+                <ul>
+                    <li><a href = "home.html" class = "nav-links">Home</a></li>
+                    <li><a href = "events.html" class = "nav-links">Events</a></li>
+                    <li><a href = "shop.html" class = "nav-links">Shop</a></li>
+                    
+                </ul>
+            
+            </nav>
+            <br>
+            </div>
+</header>
+
+<div class="container">
+    
+    <h2>Wellness & Spa</h2>
+    <div class="wellness-grid">
+        <div class="service-card">
+            <img src="data:image/jpeg;base64,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" alt="Spa">
+            <div class="price-tag">
+                <h3>Luxury Spa</h3>
+                <p>Full Body Treatment: **3,500 KES**</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=600" alt="Massage">
+            <div class="price-tag">
+                <h3>Deep Tissue Massage</h3>
+                <p>60 Minute Session: **4,000 KES**</p>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600" alt="Swimming">
+            <div class="price-tag">
+                <h3>Heated Pool</h3>
+                <p>Day Pass: **500 KES**</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="booking-section">
+        <h2>Book an Appointment</h2>
+        <form action="#">
+            <input type="email" placeholder="Your Email Address" required>
+            <textarea rows="4" placeholder="Describe the service and preferred time..." required></textarea>
+            <button type="submit">SUBMIT BOOKING</button>
+        </form>
+    </section>
+
+    <h2>Dining & Bar</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400" alt="Restaurant Interior">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400" alt="Fine Dining Food">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=400" alt="Cocktails">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=400" alt="People eating">
+    </div>
+
+    <h2>Retail Therapy</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=400" alt="Clothing Store">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400" alt="Fashion Model">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400" alt="Shopping bags">
+        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=400" alt="Mannequin">
+    </div>
+
+    <div class="brand-links">
+        <h3>Official Brand Stores</h3>
+        <a href="https://www.louisvuitton.com" target="_blank">Louis Vuitton</a>
+        <a href="https://www.gucci.com" target="_blank">Gucci</a>
+    </div>
+
+</div>
+
+<footer style="text-align: center; padding: 2rem; color: #888;">
+   brand names and logos are the property of their respective owners. All rights reserved. This website is for informational purposes only and does not endorse or promote any specific brands or products.
+</footer>
+
+</body>
+</html>

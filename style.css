@@ -7,7 +7,7 @@
 }
 
 header {
-    display: flex;
+    display: relative;
     justify-content: space-between; /* Pushes logo left, nav right */
     align-items: center;
     padding: 20px 8%;
@@ -71,7 +71,7 @@ nav ul {
 }
 
 .image-container {
-    display: flex;
+    display: relative ;
     justify-content: center;
     gap: 20px; /* Space between images */
     padding: 40px 0;
