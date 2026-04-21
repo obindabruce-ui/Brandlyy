@@ -1,4 +1,4 @@
-// Function to get data from a public API
+
 
 
     this.querySelectorAll('button').forEach(button => {
@@ -11,14 +11,41 @@
   const img = document.getElementById('food-image');
 
   btn.addEventListener('click', () => {
-    // 1. Call the API
+   
     fetch('https://foodish-api.com/api/')
-      .then(response => response.json()) // 2. Convert response to JSON
+      .then(response => response.json()) 
       .then(data => {
-        // 3. Use the 'image' property from the API response
+        
         img.src = data.image;
-        img.style.display = 'block'; // Show the image once loaded
+        img.style.display = 'block'; 
       })
       .catch(error => console.error('Error fetching food:', error));
   });
+
+
+async function fetchNewProduct() {
+    
+    const randomId = Math.floor(Math.random() * 100) + 1;
+    const cardElement = document.getElementById('product-card');
+
+    try {
+        const response = await fetch(`https://dummyjson.com/products/${randomId}`);
+        const product = await response.json();
+
+        
+        cardElement.innerHTML = `
+            <img src="${product.thumbnail}" alt="${product.title}" class="product-img">
+            <h2>${product.title}</h2>
+            <p class="category">${product.category.toUpperCase()}</p>
+            <p class="description">${product.description}</p>
+            <p class="price">$${product.price}</p>
+        `;
+    } catch (error) {
+        cardElement.innerHTML = `<p>Error loading product. Please try again.</p>`;
+        console.error("API Error:", error);
+    }
+}
+
+
+fetchNewProduct();
 

@@ -6,6 +6,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+ :root {
+            --gold: #e9e6e0;
+            --dark: #dbcece;
+            --glass: rgba(210, 202, 215, 0.9);
+        }
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+            background-color: #ba90d3;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
 header {
     display: relative;
     justify-content: space-between; /* Pushes logo left, nav right */
@@ -14,6 +28,102 @@ header {
     background-color: #fff;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Soft shadow for aesthetics */
 }
+h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #020202;
+}
+.container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+            margin-bottom: 2rem;
+            width: 100%;
+            padding-bottom: 10px;
+        }
+.container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-container {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* The "Secondary" image starts invisible */
+        .img-secondary {
+            opacity: 0;
+        }
+
+        /* Hover Effect: Swap Images */
+        .section-card:hover .img-primary {
+            opacity: 0;
+        }
+        .section-card:hover .img-secondary {
+            opacity: 1;
+        }
+
+        .content {
+            padding: 1.5rem;
+        }
+
+        .content h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        /* Upcoming Events List Style */
+        .event-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .event-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9rem;
+        }
+
+        .event-list li span {
+            font-weight: bold;
+            display: block;
+        }
 
 .logo {
     font-size: 24px;
@@ -70,35 +180,67 @@ nav ul {
 
 }
 
-.image-container {
-    display: relative ;
-    justify-content: center;
-    gap: 20px; /* Space between images */
-    padding: 40px 0;
-    
+.container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+.wellness-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 4rem;
+        }
+
+.view-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 4rem ;
 }
-.image-container img {
-    width: 500px; /* Set a fixed width for images */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Soft shadow for images */
-    transition: transform 0.3s ease;
+.service-card {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1);
+        }
+.view-item {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-.image-container img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
+.view-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.view-item:hover img {
+    transform: scale(1.1);
 }
 background {
     background-color: #a37cd1;
     padding: 50px 0;
 }
-body {
 
-    background-color: #d0bfdd;
-    
     
     
    
-}
+
 .location {
     display: relative;
     justify-content: center;
@@ -118,3 +260,90 @@ button {
 button:hover {
     background-color: #5b2d93; /* Darker blue on hover */
 }
+ .price-tag {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 20px;
+        }
+
+        /* Booking Form */
+        .booking-section {
+            background: #f4f1ea;
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 4rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #b38f48;
+        }
+
+        /* Gallery Sections */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 3rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Brand Links */
+        .brand-links {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+            border-radius: 10px;
+        }
+
+        .brand-links a {
+            color: var(--gold);
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 1px solid var(--gold);
+            padding: 10px 20px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .brand-links a:hover {
+            background: var(--gold);
+            color: white;
+        }
