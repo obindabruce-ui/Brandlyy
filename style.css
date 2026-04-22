@@ -1,4 +1,4 @@
-/* Reset basic styles */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,11 +22,11 @@
 
 header {
     display: relative;
-    justify-content: space-between; /* Pushes logo left, nav right */
+    justify-content: space-between; 
     align-items: center;
     padding: 20px 8%;
     background-color: #fff;
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Soft shadow for aesthetics */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 h3 {
     text-align: center;
@@ -84,12 +84,14 @@ h3 {
             transition: opacity 0.5s ease-in-out;
         }
 
-        /* The "Secondary" image starts invisible */
+        img-primary {
+            opacity: 1;
+        }
         .img-secondary {
             opacity: 0;
         }
 
-        /* Hover Effect: Swap Images */
+        
         .section-card:hover .img-primary {
             opacity: 0;
         }
@@ -108,7 +110,7 @@ h3 {
             font-size: 1.1rem;
         }
 
-        /* Upcoming Events List Style */
+      
         .event-list {
             list-style: none;
             padding: 0;
@@ -134,9 +136,9 @@ h3 {
 }
 
 nav ul {
-    list-style: none; /* Removes bullet points */
+    list-style: none; 
     display: flex;
-    gap: 30px; /* Space between links */
+    gap: 30px; 
 }
 
 .nav-links {
@@ -147,10 +149,10 @@ nav ul {
 }
 
 .nav-links:hover {
-    color: #007bff; /* Changes color on hover */
+    color: #007bff; 
 }
 
-/* Hero Section Spacing */
+
 .hero {
     text-align: center;
     padding: 100px 20px;
@@ -176,7 +178,7 @@ nav ul {
     transition: background-color 0.3s ease;
 }
 .button:hover {
-    background-color: #5b2d93; /* Darker blue on hover */
+    background-color: #5b2d93; 
 
 }
 
@@ -258,7 +260,7 @@ button {
     transition: background-color 0.3s ease;
 }
 button:hover {
-    background-color: #5b2d93; /* Darker blue on hover */
+    background-color: #5b2d93;
 }
  .price-tag {
             position: absolute;
@@ -270,7 +272,7 @@ button:hover {
             padding: 20px;
         }
 
-        /* Booking Form */
+        
         .booking-section {
             background: #f4f1ea;
             padding: 3rem;
@@ -308,7 +310,7 @@ button:hover {
             background: #b38f48;
         }
 
-        /* Gallery Sections */
+        
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -323,7 +325,6 @@ button:hover {
             border-radius: 8px;
         }
 
-        /* Brand Links */
         .brand-links {
             text-align: center;
             padding: 2rem;

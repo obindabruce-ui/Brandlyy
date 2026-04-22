@@ -49,3 +49,32 @@ async function fetchNewProduct() {
 
 fetchNewProduct();
 
+async function searchProduct() {
+    const query = document.getElementById('search-input').value;
+    const cardElement = document.getElementById('product-card');
+
+    if (!query) return; 
+
+    try {
+        const response = await fetch(`https://dummyjson.com{query}`);
+        const data = await response.json();
+
+        if (data.products.length > 0) {
+            const product = data.products[0]; 
+            cardElement.innerHTML = `
+                <img src="${product.thumbnail}" alt="${product.title}" class="product-img">
+                <h2>${product.title}</h2>
+                <p class="category">${product.category.toUpperCase()}</p>
+                <p class="description">${product.description}</p>
+                <p class="price">$${product.price}</p>
+            `;
+        } else {
+            cardElement.innerHTML = `<p>No products found for "${query}".</p>`;
+        }
+    } catch (error) {
+        cardElement.innerHTML = `<p>Error searching for product.</p>`;
+        console.error("API Error:", error);
+    }
+}
+
+
